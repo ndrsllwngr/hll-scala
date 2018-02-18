@@ -2,7 +2,9 @@
 
  
 1. SBT Version 1.1.0
-2. IntelliJ IDEA 2017.3.4 (for editing)
+2. nodejs + npm
+3. yarn
+4. IntelliJ IDEA 2017.3.4 (for editing)
 
 ## Backend Setup
 
