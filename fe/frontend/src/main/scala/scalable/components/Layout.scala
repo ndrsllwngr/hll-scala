@@ -29,10 +29,8 @@ object Layout {
       <.div(
         <.div(
           ^.cls := "blurBg"
-          //TODO Background
         ),
         <.div(^.cls := "container", props.resolution.render())
-        //TODO
       )
     }
   }

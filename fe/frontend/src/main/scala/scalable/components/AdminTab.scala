@@ -39,6 +39,8 @@ object AdminTab {
     var player: Option[Player] = Option.empty
     var props: Props = _
 
+    var hasSong: Boolean = false
+
 
     def onPlayerReady(e: Event): js.UndefOr[(Event) => Any] = {
       e.target.whenDefined(p => { p.playVideo()
@@ -48,13 +50,13 @@ object AdminTab {
     }
 
     def resolveNext(player: Player): Unit = {
-      println("resolve")
+
       val state = props.proxy.modelReader.apply()
       var songList = state.songList.filter(s => s.playState.equals("QUEUE"))
       if (songList.isEmpty) {
         songList = scala.util.Random.shuffle(state.songList)
       }
-      player.hasSong = true
+      hasSong = true
       if (songList.nonEmpty) props.proxy.value.partyId match {
         case Some(id) => loadSong(player, songList.head, id)
         case None => println("No Party ID")
@@ -68,7 +70,6 @@ object AdminTab {
     }
 
     def onPlayerStateChange(e: Event): js.UndefOr[(Event) => Any] = {
-      println("state Change")
       e.target.whenDefined(p => {
         println(s"state ${p.getPlayerState()}")
         p.getPlayerState() match {
@@ -92,7 +93,6 @@ object AdminTab {
     }
 
     def unmounted: Callback = Callback {
-      println("Unmounted")
       js.timers.clearInterval(timer)
     }
 
@@ -106,10 +106,10 @@ object AdminTab {
       props.proxy.value.partyId match {
         case Some(id) => RestService.getSongs(id).map { songs => {
           AppCircuit.dispatch(SetSongsForParty(songs))
-          if (songs.nonEmpty && player.isDefined) {
-            if(!player.get.hasSong) resolveNext(player.get)
-          } else if (songs.isEmpty && player.isDefined){
-            if(player.get.hasSong) player.get.hasSong = false
+          if (songs.nonEmpty && player.isDefined && !hasSong) {
+            resolveNext(player.get)
+          } else if (songs.isEmpty && player.isDefined && hasSong){
+            hasSong = false
           }
         }
         }
@@ -118,7 +118,6 @@ object AdminTab {
     }
 
     def createPlayer(): Unit = {
-      println("create player")
       val tag = org.scalajs.dom.document.createElement("script").asInstanceOf[org.scalajs.dom.html.Script]
       tag.src = "https://www.youtube.com/iframe_api"
       val firstScriptTag = org.scalajs.dom.document.getElementsByTagName("script").item(0)
@@ -145,8 +144,7 @@ object AdminTab {
     def render(p: Props): VdomTagOf[Div] = {
       val proxy = p.proxy()
       props = p
-      if(player.isEmpty)
-        createPlayer()
+      createPlayer()
       var roomCode: String = "NO PARTY ID"
       p.proxy.value.partyId match {
         case Some(id) => roomCode = id

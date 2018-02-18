@@ -60,8 +60,9 @@ object AlreadyPlayedComp {
       ),
       <.div( // Child 2 Song title
         <.pre(
-          ^.cls := "h6 mb-0 text-secondary",
-          "ALREADY PLAYED"),
+          ^.cls := "h6 mb-0 text-secondary", ^.verticalAlign := "text-top",
+          "ALREADY PLAYED ",
+          <.span(^.cls := "badge badge-secondary",^.verticalAlign := "top" , song.upvotes - song.downvotes )),
         ^.flex := "1 1 auto",
         ^.cls := "h3 mb-0 mr-2 text-truncate",
         name,<.pre(

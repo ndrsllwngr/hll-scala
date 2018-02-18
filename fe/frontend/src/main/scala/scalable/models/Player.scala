@@ -117,8 +117,6 @@ import scala.scalajs.js.annotation._
   @JSGlobal("YT.Player")
   class Player protected() extends js.Object {
 
-    var hasSong: Boolean = false
-
     def this(divId:String, settings:PlayerOptions) = this()
 
     //https://developers.google.com/youtube/iframe_api_reference?hl=en#Playback_controls
@@ -127,10 +125,8 @@ import scala.scalajs.js.annotation._
     def loadVideoById(opts:VideoIdStartOptions):Unit =  js.native
     def cueVideoById(videoId:String,startSeconds:Double,suggestedQuality:String):Unit =  js.native
     def cueVideoById(opts:VideoIdStartOptions):Unit = js.native
-    // TODO: obj syntax
     def cueVideoByUrl(mediaContentUrl:String,startSeconds:Double,suggestedQuality:String):Unit = js.native
     def loadVideoByUrl(mediaContentUrl:String,startSeconds:Double,suggestedQuality:String):Unit = js.native
-    // TODO: ...
 
     // controls
     def playVideo():Unit = js.native
