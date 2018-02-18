@@ -1,0 +1,20 @@
+# Ignore Play! working directory #
+bin/
+/db
+.eclipse
+/lib/
+/logs/
+/modules
+/project/target
+/target
+tmp/
+test-result
+server.pid
+*.eml
+/dist/
+.cache
+run_app.sh
+# frontend ignores
+node_modules
+.DS_Store
+.idea
