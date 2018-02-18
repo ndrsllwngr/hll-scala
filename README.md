@@ -9,18 +9,16 @@
 ## Backend Setup
 
 1. Clone repository
-2. `cd backend`
+2. `cd be/backend`
 3. `sbt run`
 
 ## Frontend Setup
 
 1. Clone repository
-2. `cd fe`
-3. `cd frontend`
-4. `yarn install`
-5. `sbt fastOptJS` (hint `sbt clean run`)
-6. `npm run start`
-7. Open in browser `http://localhost:8080`
+2. `cd fe/frontend`
+3. `yarn install`
+4. `sbt fastOptJS`
+5. `npm run start` opens in browser `http://localhost:8080`
 
 ## Access locally running server and website from mobile device
 
