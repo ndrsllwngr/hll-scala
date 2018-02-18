@@ -67,7 +67,9 @@ object VoteComp {
         <.div(
         <.div( ^.key := props.voteAble.compId,
           ^.classSet(
-            "p-2 text-center align-self-center" -> true),
+            "p-2 text-center align-self-center" -> true,
+            "text-success" -> colorGreen(props.voteAble),
+            "text-danger" -> colorRed(props.voteAble)),
           calcTotal(props.voteAble).toString
         ),
           <.button(
