@@ -122,7 +122,7 @@ Response: Int oder ein Fehler
 
 Wichtig: header "Content-Type" muss den Wert "application/json" haben
                 
- ## Song Löschen
+## Song Löschen
 Methode: DELETE
 
 URL: localhost:5000/party/song/
@@ -134,7 +134,7 @@ Response: Song ${songToDelete.id} for party ${songToDelete.partyID} deleted oder
 
 Wichtig: header "Content-Type" muss den Wert "application/json" haben
                                
- ## Foto Löschen
+## Foto Löschen
 Methode: DELETE
 
 URL: localhost:5000/party/photo/
