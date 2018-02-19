@@ -16,7 +16,7 @@
 ## Frontend Setup
 
 1. Clone repository
-2. `cd scalable/fe/frontend`
+2. `cd scalable/fe/frontend/`
 3. `yarn install`
 4. `sbt fastOptJS`
 5. `npm run start` opens in browser `http://localhost:8080`
