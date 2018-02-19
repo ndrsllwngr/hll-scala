@@ -1,6 +1,5 @@
 ## Minimal Requirements
 
- 
 1. SBT Version 1.1.0
 2. nodejs + npm
 3. yarn
@@ -9,7 +8,7 @@
 ## Backend Setup
 
 1. Clone repository
-2. `cd be/backend`
+2. `cd be`
 3. `sbt run`
 
 ## Frontend Setup
