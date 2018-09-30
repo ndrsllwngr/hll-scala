@@ -1,5 +1,7 @@
 ![preview](img/desktop_start.png)
 
+[TOC]
+
 ## Minimal Requirements
  
 1. SBT Version 1.1.0
@@ -28,3 +30,27 @@
 3. `sbt fastOptJS`
 4. `npm run mobile`
 5. Open your mobile browser and go to `yourlocalIPadress:8080` (you might have to disable firewall first)
+
+## Projektidee
+
+Prinzipiell soll die Anwendung eine Möglichkeit für Partygäste bieten, mit dem Gastgeber und untereinander zu interagieren.
+Der Gastgeber kann als Administrator einen Room anlegen, welchem Partygäste nach Eingabe von Room-Name und selbstgewähltem Nutzername auf einer Website beitreten können. Anschließend haben die Gäste die Möglichkeit über die Musik, welche auf dem Gerät des Administrator abgespielt werden soll, abzustimmen. Dabei soll es verschiedene Konfigurationsmöglichkeiten durch den Gastgeber geben auf welche Art und Weise die Playlist durch die Gäste beeinflusst werden kann. 
+Zusätzlich gibt es einen Foto-Feed, in welchem die Gäste ihre Party-Bilder direkt hochladen können und dadurch direkt für andere Gäste sichtbar machen können. Die Bilder können außerdem mit Up- und Down-Votes versehen werden und werden dementsprechend sortiert.
+
+## Architektur
+
+Jeweils Webapplikation für Admin/Gastgeber zur Musikwiedergabe und Nutzer/Besucher für Abstimmung über die Musik und Dar- sowie Erstellung des Fotofeeds.
+REST-Backend, welches die Anwendungslogik realisiert und die Daten in einer Datenbank verwaltet.
+Vorraussichtlich eingesetzte Technologien:
+
+- Play
+- Scala.js
+- Akka
+- Slick
+
+## Team
+
+- Andreas Ellwanger
+- Andreas Griesbeck
+- Stephan Holzner
+- Timo Erdelt
