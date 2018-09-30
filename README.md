@@ -7,7 +7,7 @@
 3. yarn
 4. IntelliJ IDEA 2017.3.4 (for editing)
 
-## Backend Setup
+## Backend Setup ([dev-repository](https://github.com/griase94/scalable_server))
 
 1. Clone repository
 2. `cd scalable/be/`
