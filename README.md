@@ -1,7 +1,5 @@
 ![preview](img/desktop_start.png)
 
-[TOC]
-
 ## Minimal Requirements
  
 1. SBT Version 1.1.0
