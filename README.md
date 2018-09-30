@@ -48,7 +48,7 @@ Vorraussichtlich eingesetzte Technologien:
 
 ## Team
 
-- Andreas Ellwanger (@andreasellw)
+- Andreas Ellwanger
 - Andreas Griesbeck
 - Stephan Holzner
 - Timo Erdelt
