@@ -13,7 +13,7 @@
 2. `cd scalable/be/`
 3. `sbt run`
 
-## Frontend Setup ([dev-repository](https://github.com/andreasellw/scalable-frontend))
+## Frontend Setup ([dev-repository](https://github.com/andreasellw/scalable_frontend))
 
 1. Clone repository
 2. `cd scalable/fe/frontend/`
