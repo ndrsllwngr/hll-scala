@@ -1,0 +1,6 @@
+[submodule "scalable_server"]
+	path = scalable_server
+	url = git@github.com:griase94/scalable_server.git
+[submodule "scalable_frontend"]
+	path = scalable_frontend
+	url = git@github.com:ndrsllwngr/scalable_frontend
