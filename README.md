@@ -1,3 +1,7 @@
+# YouTube Party Mode - written in Scala(.js)
+
+High-level languages: Rust - Group project (2017/2018)
+
 ![preview](img/desktop_start.png)
 
 ## Minimal Requirements
